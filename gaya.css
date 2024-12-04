@@ -1,0 +1,141 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "king", sans-serif;
+    box-sizing: border-box;
+}
+
+.fContainer {
+    display: flex;
+    flex-direction: column; /* Mengubah arah flex menjadi kolom */
+    justify-content: center; /* Menyusun konten di tengah secara vertikal */
+    align-items: center; /* Menyusun konten di tengah secara horizontal */
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(218, 16, 16, 0.788);
+    position: fixed;
+    top: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px; /* Ukuran font yang lebih besar */
+    padding: 15px;
+    width: 100%;
+    height: 80px;
+    background-color: aliceblue;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.788);
+    border-radius: 0px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden; /* Mencegah overflow */
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.firstime {
+    color: aqua;
+    font-weight: 600;
+}
+
+.closetime {
+    color: red;
+    padding-left: 10px;
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Membuat item nav membungkus jika tidak muat */
+}
+
+.nav > li {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.nav > li > a {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-decoration: overline;
+}
+
+.nav > li > a:hover {
+    color: rgb(255, 0, 0);
+    transition: all .3s ease-in-out;
+}
+
+.nyala {
+    background-color: rgb(236, 240, 26);
+    color: black;
+    padding: 15px;
+}
+
+.kotak {
+    display: flex;
+    flex-direction: column; /* Mengatur isi kotak menjadi kolom */
+    width: 20%; /* Lebar kotak */
+    padding: 30px; /* Padding di dalam kotak */
+    background-color: #3498db; /* Warna kotak */
+    border: 2px solid #2980b9; /* Border kotak */
+    border-radius: 10px; /* Sudut kotak yang membulat */
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    color: white; /* Warna teks */
+    margin-top: 20px; /* Memberikan jarak dari atas */
+    transition: transform 0.3s ease; /* Menambahkan transisi untuk efek hover */
+}
+
+.button {
+    margin-left: 60; /* Memindahkan tombol ke sebelah kanan */
+    padding: 20px 30px; /* Padding untuk tombol */
+    border: none; /* Menghilangkan border default */
+    border-radius: 25px; /* Membuat tombol oval */
+    background-color: #40964b; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+}
+
+
+.kotak:hover {
+    background-color: #1f639b; /* Warna latar belakang saat hover */
+    transform: scale(1.05); /* Membesarkan kotak saat di-hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Menambahkan bayangan saat di-hover */
+}
+
+
+/* Media Queries untuk layar kecil */
+@media (max-width: 600px) {
+    .wrapper {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom pada layar kecil */
+        align-items: flex-start; /* Menyusun item di kiri */
+    }
+
+    .nav {
+        width: 100%; /* Memastikan nav mengambil lebar penuh */
+        justify-content: space-around; /* Menyusun item nav secara merata */
+    }
+
+    .nav > li {
+        padding: 10px; /* Padding yang lebih kecil untuk item nav */
+    }
+
+    .kotak {
+        width: 90%; /* Lebar kotak responsif */
+        max-width: 300px; /* Maksimal lebar kotak */
+        padding: 20px; /* Padding yang lebih kecil */
+    }
+}
